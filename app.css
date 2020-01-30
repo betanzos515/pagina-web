@@ -10,6 +10,10 @@
     box-sizing: inherit;
 }
 
+img{
+    width:100%;
+}
+
 header{
     width: 100%;
     height: 4.5rem;
@@ -52,4 +56,31 @@ header ul li:last-child{
 .contenedor img{
     width: 100%;
     height: 100%;
+}
+.principal{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.principal .productos{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.productos li{
+    margin-top: 1.5rem;
+    flex: 0 0 calc(30%);
+    list-style: none;
+}
+
+.productos li h3{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.productos li p{
+    text-align: center;
 }
