@@ -16,23 +16,26 @@ img{
 
 header{
     width: 100%;
-    height: 4.5rem;
 }
 
 header ul{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style: none;
     background-color: #85CE25;
-    height: 100%;
+
 }
 
 header ul li{
-    flex:0 0 calc(20% - 2rem);
-    margin-right: .5rem;
-    height: 100%;
+    /* flex:0 0 calc(20% - 2rem); */
+    /* flex:1; */
+    /* margin-right: .5rem; */
+   /*  height: 100%; */
     display: flex;
+    width: 100%;
+    height: 3rem;
     align-items: center;
     justify-content: center;
 }
@@ -41,11 +44,6 @@ header ul li:hover{
     background-color:#7A2A3D;
     color: white;
 }
-
-
-header ul li:last-child{
-    margin-right: 0;
-} 
 
 .contenedor{
     width: 100%;
@@ -64,13 +62,12 @@ header ul li:last-child{
 
 .principal .productos{
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .productos li{
-    margin-top: 1.5rem;
-    flex: 0 0 calc(30%);
+    flex: 0 0 calc(50% - 1rem);
     list-style: none;
 }
 
@@ -83,4 +80,21 @@ header ul li:last-child{
 }
 .productos li p{
     text-align: center;
+}
+
+@media screen and (min-width:720px){
+    header ul{
+        flex-direction: row;
+        height: 4.5rem;
+    }
+
+    header ul li{
+        height: 100%;
+    }
+
+    .productos li{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+
+
 }
